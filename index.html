@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babysitter Scheduling — Household SMS Notification Service</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #f9fafb;
+    }
+
+    header {
+      background: #3d4f6b;
+      color: #e8edf5;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: #b8c8df;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e94560;
+      display: inline-block;
+    }
+
+    section p {
+      color: #374151;
+      margin-bottom: 0.75rem;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #eff6ff;
+      color: #1e40af;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .stop-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    .stop-box p {
+      color: #14532d;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .contact-box {
+      background: #f4f6f9;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .contact-box a {
+      color: #0f3460;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #9ca3af;
+      padding: 2rem 1.5rem 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Babysitter Scheduling — Household SMS Notification Service</h1>
+    <p>Private household automation tool &mdash; not a commercial service</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>What this is</h2>
+      <p>
+        This is a private, household-use automation tool operated by
+        <strong>Marshall Worrall</strong> to coordinate babysitting coverage for
+        our family. It is not a commercial product, marketing service, or
+        business of any kind.
+      </p>
+      <p>
+        The tool monitors our daughter's school calendar for holidays and
+        early-dismissal days, then sends SMS messages to a small, personally
+        known list of babysitters to ask about their availability. All
+        recipients are individuals known personally to our family who have
+        given explicit verbal consent to receive these messages.
+      </p>
+    </section>
+
+    <section>
+      <h2>Who receives messages</h2>
+      <p>
+        Messages are sent only to a fixed private list of babysitters who have
+        individually agreed to be contacted by SMS for scheduling purposes.
+        No messages are sent to unknown recipients, purchased lists, or anyone
+        who has not personally consented.
+      </p>
+      <p>
+        Messages are also sent to the two household members (myself and my
+        wife) as booking confirmations and scheduling notifications.
+      </p>
+    </section>
+
+    <section>
+      <h2>Types of messages sent</h2>
+      <p>All messages fall into one of these categories:</p>
+      <br>
+      <span class="pill">Availability request</span>
+      <span class="pill">Booking confirmation</span>
+      <span class="pill">Cancellation notice</span>
+      <span class="pill">Schedule alert</span>
+      <br><br>
+      <p>
+        Example messages:
+      </p>
+      <p style="font-style: italic; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem;">
+        "Hi Sarah, are you available to babysit on April 18 from 3:00pm to 7:00pm?
+        Reply YES or NO to this number. Thanks!"
+      </p>
+      <p style="font-style: italic; color: #6b7280; font-size: 0.9rem;">
+        "Babysitter confirmed: Sarah on April 18, 3:00pm–7:00pm. Calendar updated."
+      </p>
+    </section>
+
+    <section>
+      <h2>Message frequency</h2>
+      <p>
+        Message volume is low — typically between 2 and 10 messages per month
+        in total across all recipients, sent only when a childcare need arises.
+        No recurring, promotional, or unsolicited messages are ever sent.
+      </p>
+    </section>
+
+    <section>
+      <h2>How recipients opted in</h2>
+      <p>
+        Each babysitter on our contact list has been asked personally — by phone
+        call or in person — whether they are willing to receive SMS scheduling
+        requests from our family. Only those who agreed are included. Consent
+        is recorded privately and can be provided to carriers upon request.
+      </p>
+    </section>
+
+    <section>
+      <h2>How to opt out</h2>
+      <p>
+        Any recipient can stop receiving messages at any time by replying
+        <strong>STOP</strong> to any message. Their number will be permanently
+        removed from the contact list and no further messages will be sent.
+      </p>
+      <div class="stop-box">
+        <p>Reply <strong>STOP</strong> to any message to unsubscribe immediately.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        This service is operated by <strong>Marshall Worrall</strong>.
+        Contact details are on file with the messaging service provider
+        as part of the A2P 10DLC brand registration.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>This is a private household tool. &copy; <span id="yr"></span> Marshall Worrall. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
