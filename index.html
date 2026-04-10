@@ -127,7 +127,7 @@
       <h2>What this is</h2>
       <p>
         This is a private, household-use automation tool operated by
-        <strong>Marshall Worrall</strong> to coordinate babysitting coverage for
+        <strong>[Your Full Name]</strong> to coordinate babysitting coverage for
         our family. It is not a commercial product, marketing service, or
         business of any kind.
       </p>
@@ -136,7 +136,8 @@
         early-dismissal days, then sends SMS messages to a small, personally
         known list of babysitters to ask about their availability. All
         recipients are individuals known personally to our family who have
-        given explicit verbal consent to receive these messages.
+        completed an explicit SMS opt-in confirmation before being added
+        to the contact list.
       </p>
     </section>
 
@@ -158,15 +159,18 @@
       <h2>Types of messages sent</h2>
       <p>All messages fall into one of these categories:</p>
       <br>
+      <span class="pill">Opt-in confirmation request</span>
       <span class="pill">Availability request</span>
       <span class="pill">Booking confirmation</span>
       <span class="pill">Cancellation notice</span>
       <span class="pill">Schedule alert</span>
       <br><br>
-      <p>
-        Example messages:
-      </p>
+      <p>Example messages:</p>
       <p style="font-style: italic; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem;">
+        "Hi Sarah, this is [Your Full Name]. I'd like to add you to my babysitting
+        scheduling system. Reply YES to opt in or STOP to decline."
+      </p>
+      <p style="font-style: italic; color: #6b7280; font-size: 0.9rem;">
         "Hi Sarah, are you available to babysit on April 18 from 3:00pm to 7:00pm?
         Reply YES or NO to this number. Thanks!"
       </p>
@@ -187,11 +191,45 @@
     <section>
       <h2>How recipients opted in</h2>
       <p>
-        Each babysitter on our contact list has been asked personally — by phone
-        call or in person — whether they are willing to receive SMS scheduling
-        requests from our family. Only those who agreed are included. Consent
-        is recorded privately and can be provided to carriers upon request.
+        Every babysitter on the contact list completed an explicit SMS opt-in
+        before receiving any scheduling messages. The opt-in process works as
+        follows:
       </p>
+      <ol style="color: #374151; padding-left: 1.5rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">
+        <li style="margin-bottom: 0.5rem;">
+          The household operator sends an initial opt-in request from this
+          messaging number to each babysitter individually. Example message:
+          <span style="display: block; font-style: italic; color: #6b7280;
+            font-size: 0.9rem; margin-top: 0.4rem; padding: 0.6rem 0.75rem;
+            background: #f9fafb; border-left: 3px solid #e5e7eb;
+            border-radius: 4px;">
+            "Hi [Name], this is [Your Full Name]. I'd like to add you to my
+            babysitting scheduling system so I can reach you by text when I
+            need childcare coverage. Reply YES to confirm you're happy to
+            receive these messages, or STOP to decline."
+          </span>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+          The babysitter replies <strong>YES</strong> to confirm consent.
+          Only recipients who reply YES are added to the active contact list.
+        </li>
+        <li>
+          The opt-in exchange is recorded in the Twilio message log and
+          available for carrier verification upon request.
+        </li>
+      </ol>
+      <p>
+        No babysitter receives a scheduling message before completing this
+        opt-in step. Recipients who do not reply or who reply STOP are not
+        contacted further.
+      </p>
+      <div class="stop-box" style="margin-top: 0.75rem;">
+        <p>
+          Opt-in is confirmed by replying <strong>YES</strong> to the initial
+          request. Opt-out is available at any time by replying
+          <strong>STOP</strong>.
+        </p>
+      </div>
     </section>
 
     <section>
@@ -209,7 +247,7 @@
     <section>
       <h2>Contact</h2>
       <p>
-        This service is operated by <strong>Marshall Worrall</strong>.
+        This service is operated by <strong>[Your Full Name]</strong>.
         Contact details are on file with the messaging service provider
         as part of the A2P 10DLC brand registration.
       </p>
@@ -217,15 +255,17 @@
 
   </main>
 
-<footer>
-  <p>&copy; <span id="yr"></span> Marshall Worrall. All rights reserved.</p>
-  <p style="margin-top: 0.5rem;">
-    <a href="/privacy" style="color: #9ca3af; margin-right: 1rem;">Privacy Policy</a>
-    <a href="/terms" style="color: #9ca3af;">Terms &amp; Conditions</a>
-  </p>
-</footer>
+  <footer>
+    <p>This is a private household tool. &copy; <span id="yr"></span> Marshall Worrall. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="/privacy" style="color: #9ca3af; margin-right: 1rem;">Privacy Policy</a>
+      <a href="/terms" style="color: #9ca3af;">Terms &amp; Conditions</a>
+    </p>
+  </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
