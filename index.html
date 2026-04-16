@@ -127,7 +127,7 @@
       <h2>What this is</h2>
       <p>
         This is a private, household-use automation tool operated by
-        <strong>Marshall Worrall</strong> to coordinate babysitting coverage for
+        <strong>[Your Full Name]</strong> to coordinate babysitting coverage for
         our family. It is not a commercial product, marketing service, or
         business of any kind.
       </p>
@@ -168,7 +168,10 @@
       <p>Example messages:</p>
       <p style="font-style: italic; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem;">
         "Hi Sarah, this is Marshall Worrall. I'd like to add you to my babysitting
-        scheduling system. Reply YES to opt in or STOP to decline."
+        scheduling system to send scheduling requests by text. Msg &amp; data rates
+        may apply. Msg frequency varies (typically 2&ndash;10/month). Reply YES to
+        opt in, STOP to decline, HELP for help. Privacy policy:
+        https://babysitter-sms-policy.pages.dev/privacy"
       </p>
       <p style="font-style: italic; color: #6b7280; font-size: 0.9rem;">
         "Hi Sarah, are you available to babysit on April 18 from 3:00pm to 7:00pm?
@@ -191,43 +194,47 @@
     <section>
       <h2>How recipients opted in</h2>
       <p>
-        Every babysitter on the contact list completed an explicit SMS opt-in
+        Every recipient on the contact list completed an explicit SMS opt-in
         before receiving any scheduling messages. The opt-in process works as
         follows:
       </p>
       <ol style="color: #374151; padding-left: 1.5rem; margin-top: 0.75rem; margin-bottom: 0.75rem;">
         <li style="margin-bottom: 0.5rem;">
           The household operator sends an initial opt-in request from this
-          messaging number to each babysitter individually. Example message:
-          <span style="display: block; font-style: italic; color: #6b7280;
-            font-size: 0.9rem; margin-top: 0.4rem; padding: 0.6rem 0.75rem;
-            background: #f9fafb; border-left: 3px solid #e5e7eb;
-            border-radius: 4px;">
+          messaging number to each recipient individually. The exact opt-in
+          message sent is:
+          <span style="display: block; font-style: italic; color: #374151;
+            font-size: 0.9rem; margin-top: 0.5rem; padding: 0.75rem 1rem;
+            background: #f0f4f8; border-left: 3px solid #3d4f6b;
+            border-radius: 4px; line-height: 1.6;">
             "Hi [Name], this is Marshall Worrall. I'd like to add you to my
-            babysitting scheduling system so I can reach you by text when I
-            need childcare coverage. Reply YES to confirm you're happy to
-            receive these messages, or STOP to decline."
+            babysitting scheduling system to send scheduling requests by text.
+            Msg &amp; data rates may apply. Msg frequency varies (typically
+            2&ndash;10/month). Reply YES to opt in, STOP to decline, HELP for
+            help. Privacy policy:
+            https://babysitter-sms-policy.pages.dev/privacy"
           </span>
         </li>
         <li style="margin-bottom: 0.5rem;">
-          The babysitter replies <strong>YES</strong> to confirm consent.
+          The recipient replies <strong>YES</strong> to confirm consent.
           Only recipients who reply YES are added to the active contact list.
+          Recipients who do not reply or who reply STOP are not contacted.
         </li>
         <li>
-          The opt-in exchange is recorded in the Twilio message log and
+          The opt-in exchange is retained in Twilio message logs and is
           available for carrier verification upon request.
         </li>
       </ol>
       <p>
-        No babysitter receives a scheduling message before completing this
-        opt-in step. Recipients who do not reply or who reply STOP are not
-        contacted further.
+        Mobile opt-in data is never shared with or sold to third parties or
+        affiliates for marketing or any other purpose.
       </p>
       <div class="stop-box" style="margin-top: 0.75rem;">
         <p>
-          Opt-in is confirmed by replying <strong>YES</strong> to the initial
-          request. Opt-out is available at any time by replying
-          <strong>STOP</strong>.
+          Reply <strong>YES</strong> to opt in &nbsp;·&nbsp;
+          Reply <strong>STOP</strong> to unsubscribe at any time &nbsp;·&nbsp;
+          Reply <strong>HELP</strong> for help &nbsp;·&nbsp;
+          Msg &amp; data rates may apply
         </p>
       </div>
     </section>
